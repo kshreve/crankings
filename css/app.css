@@ -1,0 +1,51 @@
+.wrapper
+{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -43px;
+}
+
+.push
+{
+    height: 63px;
+}
+
+.userInfoHeader {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.userInfo {
+    font-size: 18px;
+    font-weight:bold;
+    color: darkgray;
+}
+
+.teamsHeader {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.teamList {
+    font-size: 18px;
+    font-weight: bold;
+}
+.teamTagline {
+    font-size: 24px;
+    font-weight: bold;
+    color: lightblue;
+    width: 80%;
+}
+
+.currentTeam {
+    font-weight: bold;
+}
+
+.winrow {
+    background: #dff0d8;
+}
+
+.lossrow {
+    background: #f2dede;
+}

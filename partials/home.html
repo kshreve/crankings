@@ -1,0 +1,27 @@
+<div class="span9">
+    <div style="text-align: center; width: 100%;">
+        <h1>Combined Rankings</h1>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <th style="width: 15%">Team Name</th>
+            <th style="width: 15%">Football Rank</th>
+            <th style="width: 15%">Basketball Rank</th>
+            <th style="width: 15%">Combined Rank</th>
+        </tr>
+        <tr ng-repeat="team in teams | orderObjectBy:'Prank':false">
+			<td>
+				{{team.name}}
+			</td>
+			<td>
+				<div>{{team.Frank}}</div>
+			</td>
+			<td>
+				<div>{{team.Brank}}</div>
+			</td>
+			<td>
+				<div>{{team.Prank}}</div>
+			</td>
+        </tr>
+    </table>
+</div>
