@@ -5,14 +5,14 @@ function HomeCtrl($scope, FootballMongo, $cookies, $location, $http) {
 		$scope.rankings = rankings;
 	});
 	
-	/*FootballMongo.getById('Football', 
+	FootballMongo.getById('Football', 
 		function(out) { 
 			alert(out);
 		}
 		, function (e){ 
 			alert(e);
 		}
-	);*/
+	);
 	
 	$scope.teams = teams;	
 };
