@@ -1,6 +1,6 @@
 {
   "name": "crankings",
-  "version": "v0.1",
+  "version": "0.0.1",
   "description": "Combined rankings of top 25 schools for football and basketball.",
   "main": "web.js",
   "scripts": {
@@ -18,5 +18,8 @@
   "author": "kshreve",
   "bugs": {
     "url": "https://github.com/kshreve/crankings/issues"
+  },
+  "engines": {
+    "node": "0.10.24"
   }
 }
