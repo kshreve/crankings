@@ -9,9 +9,6 @@ function HomeCtrl($scope, FootballMongo, $cookies, $location, $http) {
 		function(out) { 
 			alert(out);
 		}
-		, function (e){ 
-			alert(e);
-		}
 	);
 	
 	$scope.teams = teams;	
