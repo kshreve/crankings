@@ -9,9 +9,9 @@
             <th style="width: 15%">Basketball Rank</th>
             <th style="width: 15%">Combined Rank</th>
         </tr>
-        <tr ng-repeat="team in teams | orderObjectBy:'Prank':false">
+        <tr ng-repeat="team in teams | orderObjectBy:'Crank':false">
 			<td>
-				{{team.name}}
+				{{team.Name}}
 			</td>
 			<td>
 				<div>{{team.Frank}}</div>
@@ -20,7 +20,7 @@
 				<div>{{team.Brank}}</div>
 			</td>
 			<td>
-				<div>{{team.Prank}}</div>
+				<div>{{team.Crank}}</div>
 			</td>
         </tr>
     </table>
