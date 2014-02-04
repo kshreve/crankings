@@ -9,16 +9,20 @@
   "keywords": [
     "cfb",
     "ncaam",
-    "heroku"
+    "heroku",
+    "c9.io",
+    "mongolab",
+    "nodejs",
+    "angularjs"
   ],
   "author": "kshreve",
   "bugs": {
     "url": "https://github.com/kshreve/crankings/issues"
   },
   "engines": {
-    "node": "0.10.24"
+    "node": "0.8.x"
   },
    "dependencies": {
-    "connect": "2.4.2",
+    "connect": "2.4.2"
    }
 }
