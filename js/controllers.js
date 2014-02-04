@@ -1,12 +1,6 @@
 function HomeCtrl($scope, FootballMongo,BasketballMongo, $cookies, $location, $http) {
-	
 	var teams = {};
 	
-	FootballMongo.all(function(rankings) {
-		$scope.rankings = rankings;
-	});
-	
-		
 	//name, Frank, FBRecord, Brank,BBRecord, Crank
 	function addTeams(teamList, sport) {
         for(var i =0; i<teamList.length; i++)

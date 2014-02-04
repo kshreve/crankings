@@ -17,5 +17,8 @@
   },
   "engines": {
     "node": "0.10.24"
-  }
+  },
+   "dependencies": {
+    "connect": "2.4.2",
+   }
 }
