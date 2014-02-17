@@ -13,7 +13,8 @@
     "c9.io",
     "mongolab",
     "nodejs",
-    "angularjs"
+    "angularjs",
+    "bootstrap"
   ],
   "author": "kshreve",
   "bugs": {
@@ -23,6 +24,7 @@
     "node": "0.8.x"
   },
    "dependencies": {
-    "connect": "2.4.2"
+    "connect": "2.4.2",
+    "express": "3.x"
    }
 }
