@@ -45,3 +45,7 @@ function HomeCtrl($scope, FootballMongo,BasketballMongo, $cookies, $location, $h
 	
 	$scope.teams = teams;
 }
+
+function ($scope, $cookies, $location, $http) {
+    
+}

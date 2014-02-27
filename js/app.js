@@ -2,6 +2,7 @@ angular.module('prank', ['prankServices','ngCookies','prankFilters','mongolabRes
     config(['$routeProvider', function($routeProvider) {
         $routeProvider.
             when('/', {templateUrl: 'partials/home.html', controller: HomeCtrl}).
+            .when('/xkcd', {templateUrl: 'partials/now.html', controller: XKCDCtrl})
             otherwise({redirectTo: '/'});
     }])
 	.constant('MONGOLAB_CONFIG',{API_KEY:'FmIllpfosmgRaRMQtSEVwizeCBTLl2w1', DB_NAME:'prankings'});;
