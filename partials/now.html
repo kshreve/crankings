@@ -6,7 +6,8 @@
     };
     loadImages(sources, initStage);
 
-    function loadImages(sources, callback) {            
+    function loadImages(sources, callback) {   
+        var assetDir = 'img/';  
         var images = {};
         var loadedImages = 0;
         var numImages = 0;
@@ -21,7 +22,7 @@
               callback(images);
             }
           };
-          images[src].src = sources[src];  
+          images[src].src = assetDir + sources[src];  
         }
     }   
     
@@ -63,7 +64,7 @@
         
         var angularSpeed = (Math.PI / 86400);
         var anim = new Kinetic.Animation(function(frame) {
-            var angleDiff = frame.timeDiff * angularSpeed;
+            var angleDiff = frame.timeDiff * angularSpeed / 500;
             foreground.rotate(angleDiff);
         }, layer);
         
