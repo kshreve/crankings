@@ -46,6 +46,6 @@ function HomeCtrl($scope, FootballMongo,BasketballMongo, $cookies, $location, $h
 	$scope.teams = teams;
 }
 
-function XKCDCtrl($scope, $cookies, $location, $http) {
+function XkcdCtrl($scope, $cookies, $location, $http) {
     
 }
