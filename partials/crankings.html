@@ -10,18 +10,18 @@
             <th style="width: 15%">Combined Rank</th>
         </tr>
         <tr ng-repeat="team in teams | orderObjectBy:'Crank':false" ng-cloak class="ng-cloak">
-			<td>
-				{{team.Name}}
-			</td>
-			<td>
-				<div>{{team.Frank || "unranked"}}</div>
-			</td>
-			<td>
-				<div>{{team.Brank || "unranked"}}</div>
-			</td>
-			<td>
-				<div>{{team.Crank}}</div>
-			</td>
+            <td>
+                {{team.Name}}
+            </td>
+            <td>
+                <div>{{team.Frank || "unranked"}}</div>
+            </td>
+            <td>
+                <div>{{team.Brank || "unranked"}}</div>
+            </td>
+            <td>
+                <div>{{team.Crank}}</div>
+            </td>
         </tr>
     </table>
 </div>

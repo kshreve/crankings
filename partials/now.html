@@ -1,73 +1,74 @@
-<div id="container"></div>	
+<div id="container"></div>
 <script defer>
-    var sources = {
-        background: 'background.png', 
+    let sources = {
+        background: 'background.png',
         foreground: 'foreground.png'
     };
     loadImages(sources, initStage);
 
-    function loadImages(sources, callback) {   
-        var assetDir = 'img/';  
-        var images = {};
-        var loadedImages = 0;
-        var numImages = 0;
-        
-        for(var src in sources) {
-          numImages++;
+    function loadImages(sources, callback) {
+        let assetDir     = 'img/',
+            images       = {},
+            loadedImages = 0,
+            numImages    = 0;
+
+        for(let src in sources) {
+            numImages++;
         }
-        for(var src in sources) {
-          images[src] = new Image();
-          images[src].onload = function() {
-            if(++loadedImages >= numImages) {
-              callback(images);
-            }
-          };
-          images[src].src = assetDir + sources[src];  
+        for(let src in sources) {
+            images[src] = new Image();
+            images[src].onload = function() {
+                if(++loadedImages >= numImages) {
+                    callback(images);
+                }
+            };
+            images[src].src = assetDir + sources[src];
         }
-    }   
-    
+    }
+
     function initStage(images) {
-        var stage = new Kinetic.Stage({
+        let stage = new Kinetic.Stage({
             container: 'container',
             width: 706,
             height: 706
-        }); 
-        
-        var background = new Kinetic.Image({
-          image: images.background,
-          x: 0,
-          y: 0,
-          width: 706,
-          height: 706
         });
-        
-        var layer = new Kinetic.Layer();   
+
+        let background = new Kinetic.Image({
+            image: images.background,
+            x: 0,
+            y: 0,
+            width: 706,
+            height: 706
+        });
+
+        let layer = new Kinetic.Layer();
         layer.add(background);
         stage.add(layer);
-        
-        var foreground = new Kinetic.Image({
-          image: images.foreground,
-          x: 353,
-          y: 353,
-          width: 577,
-          height: 613,
-          offset: {x: 288.5, y: 306.5}
+
+        let foreground = new Kinetic.Image({
+            image: images.foreground,
+            x: 353,
+            y: 353,
+            width: 577,
+            height: 613,
+            offset: {x: 288.5, y: 306.5}
         });
-        
-        var layer = new Kinetic.Layer();   
+
+        let layer = new Kinetic.Layer();
         layer.add(foreground);
         stage.add(layer);
-        
-        var timeNow = new Date();
-        var offset = (((timeNow.getUTCHours()*3600) + (timeNow.getUTCMinutes()*60)+ (timeNow.getUTCSeconds()))/86400)*360;
-        foreground.rotate(offset+180);
-        
-        var angularSpeed = (Math.PI / 86400);
-        var anim = new Kinetic.Animation(function(frame) {
-            var angleDiff = frame.timeDiff * angularSpeed / 500;
+
+        let timeNow = new Date();
+        let offset = (((timeNow.getUTCHours() * 3600) + (timeNow.getUTCMinutes() * 60) + (timeNow.getUTCSeconds())) / 86400) * 360;
+        foreground.rotate(offset + 180);
+
+        let angularSpeed = (Math.PI / 86400);
+        let anim = new Kinetic.Animation(function(frame) {
+            let angleDiff = frame.timeDiff * angularSpeed / 500;
             foreground.rotate(angleDiff);
         }, layer);
-        
-        anim.start();      
-    };
+
+        anim.start();
+    }
+    ;
 </script>
