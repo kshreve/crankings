@@ -1,7 +1,7 @@
-angular.module('prankFilters', []
+angular.module('prankFilters', [])
     .filter('orderObjectBy', function() {
         return function(items, field, reverse) {
-            let filtered = [];
+            var filtered = [];
             angular.forEach(items, function(item) {
                 filtered.push(item);
             });
@@ -13,4 +13,4 @@ angular.module('prankFilters', []
             if(reverse) filtered.reverse();
             return filtered;
         };
-    }));
+    });

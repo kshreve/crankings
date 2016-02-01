@@ -1,7 +1,4 @@
 angular.module('prankServices', ['ngResource'])
-    .factory('FootballMongo', function($mongolabResourceHttp) {
-        return $mongolabResourceHttp('Rankings');
-    })
-    .factory('BasketballMongo', function($mongolabResourceHttp) {
+    .factory('Mongo', function($mongolabResourceHttp) {
         return $mongolabResourceHttp('Rankings');
     });

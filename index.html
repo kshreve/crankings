@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="prank">
+<html>
 <head>
     <title>Combined Rankings</title>
     <link rel="stylesheet" type="text/css" href="css/app.css">
@@ -17,35 +17,34 @@
     <script src="lib/mongolabResourceHttp.js" type="text/javascript"></script>
     <script src="lib/kinetic-v5.0.1.min.js"></script>
     <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/filters.js" type="text/javascript"></script>
     <script src="js/controllers.js" type="text/javascript"></script>
     <script src="js/services.js" type="text/javascript"></script>
-    <script src="js/filters.js" type="text/javascript"></script>
 </head>
-<body>
-<div class="wrapper">
-    <div class="navbar navbar-inverse">
-        <div class="navbar-inner">
-            <a href="#" class="brand">Combined Rankings</a>
-        </div>
-    </div>
-
-    <div class="container-fluid">
-        <div class="row-fluid">
-            <div ng-view></div>
-        </div>
-        <div class="push"><!--//--></div>
-    </div>
-
-    <div class="navbar navbar-fixed-bottom navbar-inverse">
-        <div style="text-align: center;">
+<body ng-app="prank">
+    <div class="wrapper">
+        <div class="navbar navbar-inverse">
             <div class="navbar-inner">
-                <p class="navbar-text">
-                    &copy Kevin Shreve
-                </p>
+                <a href="#" class="brand">Combined Rankings</a>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div ng-view></div>
+            </div>
+            <div class="push"><!--//--></div>
+        </div>
+
+        <div class="navbar navbar-fixed-bottom navbar-inverse">
+            <div style="text-align: center;">
+                <div class="navbar-inner">
+                    <p class="navbar-text">
+                        &copy Kevin Shreve
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-</div>
-</body>
 </body>
 </html>

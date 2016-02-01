@@ -1,10 +1,10 @@
-function HomeCtrl($scope, FootballMongo, BasketballMongo) {
-    let teams = {};
+function HomeCtrl($scope, Mongo) {
+    var teams = {};
 
     //name, Frank, FBRecord, Brank,BBRecord, Crank
     function addTeams(teamList, sport) {
-        for(let i = 0; i < teamList.length; i++) {
-            let team = teams[teamList[i].TEAM] || {"Name": teamList[i].TEAM};
+        for(var i = 0; i < teamList.length; i++) {
+            var team = teams[teamList[i].TEAM] || {"Name": teamList[i].TEAM};
             switch(sport) {
                 case "FB":
                     team.Frank = teamList[i].RK;
@@ -22,21 +22,22 @@ function HomeCtrl($scope, FootballMongo, BasketballMongo) {
             if(team.Brank && team.Frank) {
                 team.Crank = team.Brank + team.Frank;
             }
+
             teams[team.Name] = team;
         }
     }
 
-    FootballMongo.getById('Football',
+    Mongo.getById('Football',
         function(Teams) {
-            let dateTeams = Teams.DEC0813;
+            var dateTeams = Teams.DEC0813;
             addTeams(dateTeams, "FB");
 
         }
     );
 
-    BasketballMongo.getById('Basketball',
+    Mongo.getById('Basketball',
         function(Teams) {
-            let dateTeams = Teams.DEC3013;
+            var dateTeams = Teams.DEC3013;
             addTeams(dateTeams, "BB");
         }
     );
