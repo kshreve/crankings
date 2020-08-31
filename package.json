@@ -24,7 +24,7 @@
     "node": "0.8.x"
   },
   "dependencies": {
-    "connect": "2.4.2",
+    "connect": "3.7.0",
     "express": "3.x"
   },
   "devDependencies": {
