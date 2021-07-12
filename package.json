@@ -28,7 +28,7 @@
     "express": "3.x"
   },
   "devDependencies": {
-    "nodemon": "^1.8.1",
+    "nodemon": "^2.0.12",
     "x-ray": "^2.0.3"
   }
 }
